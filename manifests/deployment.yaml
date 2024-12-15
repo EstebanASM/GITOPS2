@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gitops-web-app
+  labels:
+    app: gitops-web-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gitops-web-app
+  template:
+    metadata:
+      labels:
+        app: gitops-web-app
+    spec:
+      containers:
+      - name: gitops-web-app
+        image: nginx:latest  # Cambia esta imagen según tus necesidades
+        volumeMounts:
+        - name: html-volume
+          mountPath: /usr/share/nginx/html  # Directorio donde nginx sirve los archivos
+      volumes:
+      - name: html-volume
+        configMap:
+          name: html-configmap  # ConfigMap que contiene el archivo HTML
