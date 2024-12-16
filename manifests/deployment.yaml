@@ -1,11 +1,11 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: gitops-web-app
+  name: gitops
   labels:
     app: gitops-web-app
 spec:
-  replicas: 2
+  replicas: 4
   selector:
     matchLabels:
       app: gitops-web-app
