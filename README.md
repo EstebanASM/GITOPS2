@@ -164,4 +164,3 @@ git push
 ## 📖 7. Summary
 
 This guide ensures your GitOps2 project runs seamlessly on any machine, leveraging Minikube, Kubernetes, Docker, and ArgoCD for a robust CI/CD pipeline. The modular steps provided are adaptable to various environments.
-![alt text](image.png)
