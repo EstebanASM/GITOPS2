@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: My-app-2
+  name: gitops-web-app
   labels:
     app: gitops-web-app
 spec:
